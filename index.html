@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Тестовое задание</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <p><button type="button" class="center" onclick="openPopup()">Кликни</button></p>
+
+        <div class="form-popup center" id="myPopup">
+            <img src="images/exit-popup.png" alt="крестик выхода из поп-апа" class="exit-popup" onclick="closePopup()">
+            <div class="popup-header">Получите набор файлов<br/> для руководителя:</div>
+            <div class="wrapper">
+                <div>
+                    <div class="icons">
+                        <img src="images/doc-icon.png" alt="формат doc">
+                        <img src="images/xls-icon.png" alt="формат xls">
+                        <img src="images/pdf-icon.png" alt="формат pdf">
+                        <img src="images/pdf-icon.png" alt="формат pdf">
+                        <img src="images/pdf-icon.png" alt="формат pdf">
+                        <img src="images/pdf-icon.png" alt="формат pdf">
+                        <img src="images/pdf-icon.png" alt="формат pdf">
+                    </div>
+                    <img src="images/general-image.png" alt="картинка" class="general-image">  
+                </div>        
+                <form action="#" method="post" name="webform">
+                    <label for="email">Введите Email для получения файлов:</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <label for="phone">Введите телефон для подтверждения доступа:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (000) 000-00-00" required maxlength="18" minlength="18">
+                    <input type="submit" value="Скачать файлы">
+                    <br/>
+                    <div class="small-text lightgray">PDF 4,7 MB      DOC 0,8 MB      XLS 1,2 MB</div>
+                </form>     
+            </div>
+            <div id="thanksPopup" style="display: none;">
+                <img src="images/exit-popup.png" alt="крестик выхода из поп-апа спасибо" class="exit-thanks-popup" onclick="closeThanksPopup()">
+                <p>Спасибо за обращение!</p>
+            </div>
+            <div id="wrongNumberPopup" style="display: none;">
+                <img src="images/exit-popup.png" alt="крестик выхода из поп-апа" class="wrong-number-popup" onclick="closeWrongNumberPopup()">
+                <p>Вы неправильно указали номер</p>
+            </div>
+        </div>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>
